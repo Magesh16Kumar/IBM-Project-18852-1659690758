@@ -1,0 +1,3 @@
+*.db
+.secretkey
+__pycache__/
