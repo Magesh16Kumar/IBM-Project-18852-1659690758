@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock title %}</title>
+    <title>Assignment 1</title>
     <link rel="stylesheet" href="/static/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
@@ -12,22 +12,55 @@
     <div id="content">
         <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Flask App</a>
+              <a class="navbar-brand" href="#">Assignment 1</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                  <a class="nav-link active" aria-current="page" href="/">Home</a>
-                  <a class="nav-link" href="signin">Sign In</a>
-                  <a class="nav-link" href="signup">Sign Up</a>
-                </div>
               </div>
             </div>
           </nav>
-        {% block content %}
-        {% endblock content %}
+
+		  <br>
+          <table class="table">
+            <tbody>
+              <tr>
+                <th>Name</th>
+                <td id="name"></td>
+              </tr>
+              <tr>
+                <th>Qualification</th>
+                <td id="qual"></td>
+
+              </tr>
+              <tr>
+                <th>Age</th>
+                <td id="age"></td>
+
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td id="email"></td>
+
+              </tr>
+            </tbody>
+          </table>
     </div>
+    <script>
+
+        _name = document.getElementById("name");
+        qual = document.getElementById("qual");
+        age = document.getElementById("age");
+        email = document.getElementById("email");
+
+        const params = new URLSearchParams(window.location.search);
+
+        _name.innerText = params.get("name");
+        qual.innerText = params.get("qual");
+        age.innerText = params.get("age");
+        email.innerText = params.get("email");
+        
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
