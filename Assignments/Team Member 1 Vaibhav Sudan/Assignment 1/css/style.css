@@ -1,0 +1,22 @@
+body {
+    background: aqua;
+    font-weight: bold;
+    font-size: 20dp;
+    color: brown;
+}
+
+form{
+    text-align: center;
+    padding: 25px 50px 75px 100px;
+    margin-left: 416px;
+    margin-right: 395px;
+    background: rgba(182, 177, 177, 0.575);
+    text-align: justify;
+    display: grid;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+label{
+    font-weight: bolder;
+    color: whitesmoke;
+}
