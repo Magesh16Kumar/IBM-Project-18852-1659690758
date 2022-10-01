@@ -1,0 +1,7 @@
+body {
+    background: rgb(69, 178, 104);
+}
+
+table, th, td {
+    border: 1px solid black;
+  }

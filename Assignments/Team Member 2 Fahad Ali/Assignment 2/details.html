@@ -1,0 +1,47 @@
+<Html>  
+    <head>   
+    <title>  
+    Assignment 2  
+    </title>  
+    <link href="index.css" rel="stylesheet">
+
+    </head>  
+    <body>  
+        <table class="table">
+            <tbody>
+              <tr>
+                <th>Name</th>
+                <td id="name"></td>
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td id="email"></td>
+              </tr>
+              <tr>
+                <th>Password</th>
+                <td id="password"></td>
+              </tr>
+              <tr>
+                <th>Age</th>
+                <td id="age"></td>
+              </tr>
+              <tr>
+                <th>Address</th>
+                <td id="address"></td>
+              </tr>
+            </tbody>
+          </table>
+          <script>
+
+            let values = ["name", "email", "password", "age", "address"];
+            const params = new URLSearchParams(window.location.search);
+
+            for(const value of values) {
+                if (params.has(value)) {
+                    document.getElementById(value).innerText = params.get(value);
+                }
+            }
+
+          </script>
+    </body>  
+    </html>  
