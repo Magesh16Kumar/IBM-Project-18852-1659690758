@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ABC Hospital Assitant</title>
+    </head>
+    <body>
+        <center><h1>WELCOME TO ABC HOSPITALS PRIVATE LTD..</h1></center>
+        <script>
+            window.watsonAssistantChatOptions = {
+              integrationID: "1b0750a8-30ee-4123-b792-c9e43e647df6", // The ID of this integration.
+              region: "au-syd", // The region your integration is hosted in.
+              serviceInstanceID: "30fd864e-f134-4e42-ac0a-8e3c226b01fe", // The ID of your service instance.
+              onLoad: function(instance) { instance.render(); }
+            };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+              document.head.appendChild(t);
+            });
+          </script>
+    </body>
+</html>
